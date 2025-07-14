@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Interactive Webpage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Welcome Back </h1>
+    <p>This is my task-3 for the Intership</p>
+  </header>
+
+  <nav>
+    <button onclick="toggleMenu()">Menu</button>
+    <div id="menu" style=display:none; class="menu">
+      <a href="#"><button>Home</button></a> |
+      <a href="about.html"><button>About</button></a> |
+      <a href="contact.html"><button>COntact</button></a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+    <h2>Hello there!</h2>
+    <p>Click the button below to open a pop-up box (modal):</p>
+    <button onclick="openModal()">Open Modal</button>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span onclick="closeModal()" class="close">&times;</span>
+        <p>Hello Codeveda :) </p>
+        <p>My name is Mohammad Rahil.</p>
+      </div>
+    </div>
+    </div>
+    <div class="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="return validateForm()">
+      <input type="text" id="name" placeholder="Your Name"><br><br>
+      <input type="email" id="email" placeholder="Your Email"><br><br>
+      <textarea id="message" placeholder="Your Message"></textarea><br><br>
+      <button type="submit">Send</button>
+    </form>
+
+    <p id="form-status"></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 My Simple Website</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
